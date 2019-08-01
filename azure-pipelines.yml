@@ -46,11 +46,11 @@ steps:
   inputs:
     azureSubscription: 'Conexion DevOps'
     scriptLocation: inlineScript
-    inlineScript: 'az ml model deploy -n acicicd -f model.json --ic inferenceConfig.yml --dc deploymentConfig.yml --overwrite'
+    inlineScript: 'az ml model deploy -n mope -f model.json --ic inferenceConfig.yml --dc deploymentConfig.yml --overwrite'
 
 - task: AzureCLI@1
   displayName: 'Delete deployed service'
   inputs:
     azureSubscription: 'Conexion DevOps'
     scriptLocation: inlineScript
-    inlineScript: 'az ml service delete -n acicicd'
+    inlineScript: 'az ml service delete -n mope'
